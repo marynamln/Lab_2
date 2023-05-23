@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="uk">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик покупок</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<body>
+    <div class="box">
+        <div class="block one">
+            <div class="search">
+                <input type="text" class="search-field" placeholder="Назва товару" />
+                <button class="add-button">Додати</button>
+            </div>
+            <div class="product-item">
+                <input type="text" class="product" value="Помідори" />
+                <div class="number-only">
+                    <input type="text" class="product-number" value="2" />
+                </div>
+                <div class="not-buy-pr">
+                    <input type="text" class="not-buy-product" value="Не куплено" readonly />
+                </div>
+            </div>
+            <div class="product-item">
+                <input type="text" class="product" value="Печиво" />
+                <div class="number-of-products">
+                    <button class="minus-button">-</button>
+                    <input type="text" class="product-number" value="2" />
+                    <button class="plus-button">+</button>
+                </div>
+                <div class="buy-pr">
+                    <input type="text" class="buy-product" value="Куплено" readonly />
+                    <button class="not-button">x</button>
+                </div>
+            </div>
+            <div class="product-item">
+                <input type="text" class="product" value="Сир" />
+                <div class="number-of-products">
+                    <button class="minus-button">-</button>
+                    <input type="text" class="product-number" value="1" />
+                    <button class="plus-button">+</button>
+                </div>
+                <div class="buy-pr">
+                    <input type="text" class="buy-product" value="Куплено" readonly />
+                    <button class="not-button">x</button>
+                </div>
+            </div>
+        </div>
+        <div class="block two">
+            <div class="inscription">
+                <span>Залишилося</span>
+            </div>
+            <div class="other-prod">
+                <span class="pr-buy">
+                    Печиво
+                    <span class="amount">2</span>
+                </span>
+                <span class="pr-buy">
+                    Сир
+                    <span class="amount">1</span>
+                </span>
+            </div>
+            <div class="inscription">
+                <span>Куплено</span>
+            </div>
+            <div class="other-prod">
+                <span class="pr-buy">
+                    Помідори
+                    <span class="amount">2</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+body {
+    background-color: darkgray;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* рядок із назвою продукту */
+.product {
+    border: none;
+    font-family: "Arial";
+    font-size: medium;
+    justify-content: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.product[value="Помідори"] {
+    text-decoration: line-through;
+}
+
+/* рядок із кількістю продуктів */
+.number-of-products {
+    display: flex;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+
+.product-number{
+    font-family: "Arial";
+    font-size: small;
+    width: 23px;
+    height: 20px;
+    padding: 5px;
+}
+
+/* кнопки плюс, мінус */
+.plus-button {
+    background-color: darkgreen;
+}
+
+.minus-button {
+    background-color: darkred;
+}
+
+.plus-button,
+.minus-button {
+    border: none;
+    align-items: center; /* Вирівнювання тексту по вертикалі */
+    justify-content: center; /* Вирівнювання тексту по горизонталі */
+    border-radius: 10px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    color: white;
+    font-family: "Arial";
+}
+
+.minus-button,
+.product-number,
+.plus-button {
+    margin-left: 5px;
+}
+
+/* пошук продуктів */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    height: 25%;
+}
+
+.search-field {
+    width: 700px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: "Arial";
+    color: #4f5762;
+}
+
+/* кнопка додати */
+.add-button {
+    background-color: #225d91;
+    height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Arial";
+    font-size: medium;
+    color: white;
+    border: none;
+    margin-right: 10px;
+}
+
+.number-only{
+    display: flex;
+    margin-left: 175px;
+    margin-top: 10px;
+}
+
+/* рядок не куплено */
+.not-buy-pr{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 332px;
+}
+
+.not-buy-product{
+    outline: none;
+    border: none;
+    text-align: center;
+    background-color: lightgray;
+    display: inline-block;
+    width: 80px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: "Arial";
+    font-size: small;
+    color: #4f5762;
+}
+
+/* рядок куплено */
+.buy-pr{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 292px;
+}
+
+.buy-product{
+    outline: none;
+    border: none;
+    text-align: center;
+    background-color: lightgray;
+    display: inline-block;
+    width: 65px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: "Arial";
+    font-size: small;
+    color: #4f5762;
+}
+
+.not-button{
+    margin-left: 10px;
+    background-color: darkred;
+    font-family: "Arial";
+    font-size: small;
+    color: white;
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.block {
+    line-height: 89px;
+    font-weight: 700;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    border-radius: 5px;
+}
+
+.block:first-child {
+    margin-right: 20px;
+}
+
+.block.one {
+    flex: 2;
+}
+
+.block.two {
+    flex: 1;
+    position: relative;
+    margin-top: 10px;
+}
+
+/* напис залишилося */
+.inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    height: 25%;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: large;
+}
+
+/* продукти що залишилися */
+.other-prod{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    height: 25%;
+}
+
+.pr-buy{
+    background-color: lightgray;
+    display: flex; /* зміна значення на flex */
+    justify-content: center; /* додано нове правило */
+    align-items: center; /* додано нове правило */
+    height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-family: Arial;
+    font-size: small;
+    color: #4f5762;
+}
+
+.amount {
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border-radius: 10px;
+    display: flex; /* зміна значення на flex */
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    color: white;
+    font-family: "Arial";
+    margin-left: 2px;
+}
