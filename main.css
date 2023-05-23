@@ -7,19 +7,20 @@ body {
 }
 
 /* рядок із назвою продукту */
+.product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    height: 25%;
+}
+
 .product {
     border: none;
     font-family: "Arial";
     font-size: medium;
-    justify-content: left;
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.product-item {
-    display: flex;
-    align-items: flex-start;
+    width: 100px;
+    margin-left: 22px;
 }
 
 .product[value="Помідори"] {
@@ -29,8 +30,6 @@ body {
 /* рядок із кількістю продуктів */
 .number-of-products {
     display: flex;
-    margin-left: 150px;
-    margin-top: 10px;
 }
 
 .product-number{
@@ -67,18 +66,20 @@ body {
 .product-number,
 .plus-button {
     margin-left: 5px;
+    font-weight: bold;
 }
 
 /* пошук продуктів */
 .search {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-bottom: 1px solid gray;
     height: 25%;
 }
 
 .search-field {
+    margin-left: 22px;
     width: 700px;
     height: 35px;
     padding: 5px;
@@ -97,20 +98,18 @@ body {
     font-size: medium;
     color: white;
     border: none;
-    margin-right: 10px;
+    margin-right: 22px;
+    font-weight: bold;
 }
 
 .number-only{
     display: flex;
-    margin-left: 175px;
-    margin-top: 10px;
+    margin-right: 5px;
 }
 
 /* рядок не куплено */
 .not-buy-pr{
     display: flex;
-    margin-top: 10px;
-    margin-left: 332px;
 }
 
 .not-buy-product{
@@ -119,20 +118,21 @@ body {
     text-align: center;
     background-color: lightgray;
     display: inline-block;
-    width: 80px;
+    width: 85px;
     height: 20px;
     padding: 5px;
     border-radius: 5px;
     font-family: "Arial";
     font-size: small;
     color: #4f5762;
+    margin-right: 22px;
+    font-weight: bold;
 }
 
 /* рядок куплено */
 .buy-pr{
     display: flex;
-    margin-top: 10px;
-    margin-left: 292px;
+    margin-right: 22px;
 }
 
 .buy-product{
@@ -148,6 +148,7 @@ body {
     font-family: "Arial";
     font-size: small;
     color: #4f5762;
+    font-weight: bold;
 }
 
 .not-button{
@@ -215,9 +216,9 @@ body {
 
 .pr-buy{
     background-color: lightgray;
-    display: flex; /* зміна значення на flex */
-    justify-content: center; /* додано нове правило */
-    align-items: center; /* додано нове правило */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 25px;
     padding: 5px;
     border-radius: 5px;
@@ -226,6 +227,8 @@ body {
     font-size: small;
     color: #4f5762;
 }
+
+
 
 .amount {
     justify-content: center;
