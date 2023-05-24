@@ -34,9 +34,8 @@ body {
 
 .product-number{
     font-family: "Arial";
-    font-size: small;
     width: 23px;
-    height: 20px;
+    height: 30px;
     padding: 5px;
 }
 
@@ -54,10 +53,10 @@ body {
     border: none;
     align-items: center; /* Вирівнювання тексту по вертикалі */
     justify-content: center; /* Вирівнювання тексту по горизонталі */
-    border-radius: 10px;
+    border-radius: 15px;
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     color: white;
     font-family: "Arial";
 }
@@ -67,6 +66,7 @@ body {
 .plus-button {
     margin-left: 5px;
     font-weight: bold;
+    font-size: medium;
 }
 
 /* пошук продуктів */
@@ -113,17 +113,13 @@ body {
 }
 
 .not-buy-product{
-    outline: none;
     border: none;
-    text-align: center;
     background-color: lightgray;
     display: inline-block;
-    width: 85px;
-    height: 20px;
     padding: 5px;
     border-radius: 5px;
     font-family: "Arial";
-    font-size: small;
+    font-size: medium;
     color: #4f5762;
     margin-right: 22px;
     font-weight: bold;
@@ -136,17 +132,13 @@ body {
 }
 
 .buy-product{
-    outline: none;
-    border: none;
-    text-align: center;
-    background-color: lightgray;
     display: inline-block;
-    width: 65px;
-    height: 20px;
-    padding: 5px;
     border-radius: 5px;
+    border: none;
+    background-color: lightgray;
+    padding: 5px;
     font-family: "Arial";
-    font-size: small;
+    font-size: medium;
     color: #4f5762;
     font-weight: bold;
 }
@@ -155,7 +147,7 @@ body {
     margin-left: 10px;
     background-color: darkred;
     font-family: "Arial";
-    font-size: small;
+    font-size: medium;
     color: white;
     display: inline-block;
     border-radius: 5px;
@@ -164,7 +156,7 @@ body {
 
 .box {
     display: flex;
-    flex-wrap: wrap;
+    flex-shrink: initial;
     justify-content: space-around;
 }
 
@@ -187,7 +179,6 @@ body {
 .block.two {
     flex: 1;
     margin-left: 20px;
-    margin-top: 5px;
 }
 
 /* напис залишилося */
@@ -255,7 +246,9 @@ body {
 .add-button:hover .tooltip,
 .minus-button:hover .tooltip,
 .plus-button:hover .tooltip,
-.not-button:hover .tooltip {
+.not-button:hover .tooltip,
+.not-buy-product:hover .tooltip,
+.buy-product:hover .tooltip{
     opacity: 1;
 }
 
@@ -300,5 +293,20 @@ body {
         margin-bottom: 5px;
         font-size: medium;
         border: 2px solid #643864;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .box {
+        flex-wrap: wrap;
+    }
+
+    .block.one{
+        width: 450px;
+    }
+
+    .block.two {
+        margin-top: 10px;
+        margin-left: 0;
     }
 }
