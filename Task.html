@@ -1,79 +1,73 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кошик покупок</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-    <div class="box">
-        <div class="block one">
-            <div class="search">
+    <section class="blocks">
+        <section class="block-one">
+            <section class="search">
                 <input type="text" class="search-field" placeholder="Назва товару" />
-                <button class="add-button">Додати<span class="tooltip">Додати продукт</span></button>
-            </div>
-            <div class="product-item">
+                <button class="add-button" data-tooltip="Додати продукт">Додати</button>
+            </section>
+            <section class="product-item">
                 <input type="text" class="product" value="Помідори" />
-                <div class="number-only">
+                <section class="number-only">
                     <input type="text" class="product-number" value="2" />
-                </div>
-                <div class="not-buy-pr">
-                    <button class="not-buy-product">Не куплено<span class="tooltip">Не куплено</span></button>
-                </div>
-            </div>
-            <div class="product-item">
+                </section>
+                <section class="not-buy-pr">
+                    <button class="not-buy-product" data-tooltip="Не куплено">Не куплено</button>
+                </section>
+            </section>
+            <section class="product-item">
                 <input type="text" class="product" value="Печиво" />
-                <div class="number-of-products">
-                    <button class="minus-button">-<span class="tooltip">Видалити одиницю</span></button>
+                <section class="number-of-products">
+                    <button class="minus-button" data-tooltip="Видалити одиницю">-</button>
                     <input type="text" class="product-number" value="2" />
-                    <button class="plus-button">+<span class="tooltip">Додати одиницю</span></button>
-                </div>
-                <div class="buy-pr">
-                    <button class="buy-product">Куплено<span class="tooltip">Куплено</span></button>
-                    <button class="not-button">x<span class="tooltip">Видалити</span></button>
-                </div>
-            </div>
-            <div class="product-item">
+                    <button class="plus-button" data-tooltip="Додати одиницю">+</button>
+                </section>
+                <section class="buy-pr">
+                    <button class="buy-product" data-tooltip="Куплено">Куплено</button>
+                    <button class="not-button" data-tooltip="Видалити">x</button>
+                </section>
+            </section>
+            <section class="product-item">
                 <input type="text" class="product" value="Сир" />
-                <div class="number-of-products">
-                    <button class="minus-button">-<span class="tooltip">Видалити одиницю</span></button>
-                    <input type="text" class="product-number" value="1" />
-                    <button class="plus-button">+<span class="tooltip">Додати одиницю</span></button>
-                </div>
-                <div class="buy-pr">
-                    <button class="buy-product">Куплено<span class="tooltip">Куплено</span></button>
-                    <button class="not-button">x<span class="tooltip">Видалити</span></button>
-                </div>
-            </div>
-        </div>
-        <div class="block two">
-            <div class="inscription">
-                <span>Залишилося</span>
-            </div>
-            <div class="other-prod">
-                <span class="pr-buy">
-                    Печиво
-                    <span class="amount">2</span>
+                <section class="number-of-products">
+                    <button class="minus-button" data-tooltip="Видалити одиницю">-</button>
+                    <input type="text" class="product-number" value="3" />
+                    <button class="plus-button" data-tooltip="Додати одиницю">+</button>
+                </section>
+                <section class="buy-pr">
+                    <button class="buy-product" data-tooltip="Куплено">Куплено</button>
+                    <button class="not-button" data-tooltip="Видалити">x</button>
+                </section>
+            </section>
+        </section>
+        <section class="block-two">
+            <section class="inscription">
+                <span class="remained">Залишилося</span>
+            </section>
+            <section class="other-prod">
+                <span class="pr-buy">Печиво<span class="amount">2</span>
                 </span>
-                <span class="pr-buy">
-                    Сир
-                    <span class="amount">1</span>
+                <span class="pr-buy">Сир<span class="amount">3</span>
                 </span>
-            </div>
-            <div class="inscription">
-                <span>Куплено</span>
-            </div>
-            <div class="other-prod">
-                <span class="pr-buy">
-                    Помідори
-                    <span class="amount">2</span>
+            </section>
+            <section class="inscription">
+                <span class="bought">Куплено</span>
+            </section>
+            <section class="other-prod">
+                <span class="pr-buy" id="tomato">Помідори<span class="amount" id="2">2</span>
                 </span>
-            </div>
-        </div>
-    </div>
-    <div class="badge">
+            </section>
+        </section>
+    </section>
+    <section class="badge">
         <span>Buy List</span>
-    </div>
+    </section>
 </body>
 </html>
