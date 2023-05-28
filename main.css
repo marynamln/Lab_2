@@ -75,6 +75,10 @@ body {
     height: 25%;
 }
 
+.product-item[id="cheese"]{
+    border: none;
+}
+
 .product {
     border: none;
     font-family: Arial, serif;
@@ -209,6 +213,10 @@ body {
     align-items: center;
     border-bottom: 1px solid gray;
     height: 25%;
+}
+
+.other-prod[id="cookies"]{
+    border: none;
 }
 
 .pr-buy{
