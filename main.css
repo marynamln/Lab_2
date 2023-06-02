@@ -13,7 +13,6 @@ body {
 
 .block-one, .block-two{
     display: inline-block;
-    background-color: white;
     height: 250px;
     border-radius: 5px;
     text-align: center;
@@ -27,6 +26,7 @@ body {
 
 .block-two{
     flex: 1;
+    background-color: white;
 }
 
 /* пошук продуктів */
@@ -36,6 +36,8 @@ body {
     align-items: center;
     border-bottom: 1px solid gray;
     height: 25%;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
 }
 
 .search-field {
@@ -70,10 +72,35 @@ body {
     justify-content: space-between;
     border-bottom: 1px solid gray;
     height: 25%;
+    background-color: white;
 }
 
 .product-item[id="cheese"]{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: none;
+    border-radius: 0 0 5px 5px;
+    height: 25%;
+    background-color: white;
+}
+
+.product-item-buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    height: 25%;
+    background-color: white;
+}
+
+.product-buy {
     border: none;
+    font-family: Arial, serif;
+    font-size: medium;
+    width: 100px;
+    margin-left: 22px;
+    text-decoration: line-through;
 }
 
 .product {
@@ -84,16 +111,12 @@ body {
     margin-left: 22px;
 }
 
-.product[value="Помідори"] {
-    text-decoration: line-through;
-}
-
 /* рядок із кількістю продуктів */
 .number-of-products {
     display: flex;
 }
 
-.product-number{
+.productNumber{
     font-family: Arial, serif;
     width: 23px;
     height: 30px;
@@ -109,11 +132,16 @@ body {
     background-color: darkred;
 }
 
+.minus-button[id="1"]{
+    background-color: #9a7575;
+    pointer-events: none;
+}
+
 .plus-button,
 .minus-button {
     border: none;
-    align-items: center; /* Вирівнювання тексту по вертикалі */
-    justify-content: center; /* Вирівнювання тексту по горизонталі */
+    align-items: center;
+    justify-content: center;
     border-radius: 15px;
     display: inline-block;
     height: 30px;
@@ -124,7 +152,7 @@ body {
 }
 
 .minus-button,
-.product-number,
+.productNumber,
 .plus-button {
     margin-left: 5px;
     font-weight: bold;
@@ -205,7 +233,7 @@ body {
 }
 
 /* продукти що залишилися */
-.other-prod{
+.not-buy-products-section{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -213,11 +241,7 @@ body {
     height: 25%;
 }
 
-.other-prod[id="cookies"]{
-    border: none;
-}
-
-.pr-buy{
+.not-pr-buy{
     display: flex;
     background-color: lightgray;
     justify-content: left;
@@ -236,6 +260,7 @@ body {
     align-items: center;
     background-color: orange;
     border-radius: 10px;
+    border: none;
     display: flex;
     height: 20px;
     width: 20px;
@@ -243,6 +268,45 @@ body {
     color: white;
     font-family: Arial, serif;
     margin-left: 2px;
+}
+
+.buy-products-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 25%;
+    border: none;
+}
+
+.pr-buy{
+    display: flex;
+    background-color: lightgray;
+    justify-content: left;
+    align-items: center;
+    height: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 15px;
+    font-family: Arial, serif;
+    font-size: medium;
+    color: #4f5762;
+    text-decoration: line-through;
+}
+
+.amount-pr-buy{
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial, serif;
+    margin-left: 2px;
+    text-decoration: line-through;
 }
 
 /* бедж */
@@ -303,14 +367,6 @@ body {
     visibility: visible;
 }
 
-.pr-buy[id="tomato"]{
-    text-decoration: line-through;
-}
-
-.amount[id="2"]{
-    text-decoration: line-through;
-}
-
 .add-button:active,
 .not-buy-product:active,
 .not-button:active,
@@ -331,9 +387,21 @@ body {
         font-size: medium;
         border: 2px solid #643864;
     }
+    .product-item{
+        border-top: 1px solid gray;
+        border-bottom: none;
+    }
+
+    .product-item-buy{
+        border: none;
+    }
+
+    .block-one{
+        margin-right: 2px;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
     .blocks {
         flex-wrap: wrap;
     }
@@ -348,7 +416,7 @@ body {
     }
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 541px) {
     .blocks {
         flex-wrap: wrap;
     }
